@@ -86,9 +86,6 @@ exports.getSiblings = async (req, res) => {
     const siblings = await Student.findAll({
       where: { 
         siblingGroupId: student.siblingGroupId,
-        id: {
-          [Op.ne]: student.id // Exclude the student's id
-        }
       }
     });
     res.json(siblings);
