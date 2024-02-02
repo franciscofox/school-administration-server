@@ -41,13 +41,6 @@ const Student = sequelize.define('Student', {
       }
 });
 
-Student.addHook('beforeCreate', async (student) => {
-    const room = await Room.findOne({ where: { name: student.roomName } });
-    if (!room) {
-        throw new Error('roomName must be in Rooms table');
-    }
-    });
-
 Room.hasMany(Student, { foreignKey: 'roomName', sourceKey: 'name' });
 Student.belongsTo(Room, { foreignKey: 'roomName', targetKey: 'name' });
 
