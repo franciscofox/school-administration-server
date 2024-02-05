@@ -3,8 +3,8 @@
 ## Overview
 This is a school-administration project designed to manage rooms, students, and related functionalities. The project is divided into frontend and backend components.
 
-- Frontend: 
-- Backend: This repository (school-administration)
+- Frontend: [school-administration](https://github.com/franciscofox/school-administration)
+- Backend: This repository (school-administration-server)
 
 This repository contains the server-side code for the School Administration project. The server is built using Node.js and Express.js, and it interacts with a PostgreSQL database running in a Docker container. The server provides API endpoints to connect with the client-side of the application, facilitating the administration features. Authentication is implemented with encryption to ensure secure access.
 
